@@ -1,10 +1,9 @@
 
-//path, genarateMarkdown-require
+//create const
 
 const inquirer= require('inquirer');
 const fs = require('fs');
 const util = require('util');
-// const { title } = require('process');
 const generateMarkdown = require ('./utils/generateMarkdown');
 
 //Array questions for user input:
@@ -41,18 +40,16 @@ const questions =
         ]);
 
 
-// TODO: Create a function to initialize app
 
-//activity 20
+
+ //function to initialize app
+
 function init() {
   
     inquirer.prompt(questions).then((answers) => {
     const filename = "READMe";
-    // ${answers.name} .toLowerCase().split(' ').join(' ').json
    
-//use fs to write the file and path 
-//activity 13
-
+    //use fs to write the file and path 
     fs.writeFile(filename, generateMarkdown(answers), (err) =>
     err ? console.log(err) : console.log('Success!'));
     });
