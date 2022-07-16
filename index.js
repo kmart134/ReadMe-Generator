@@ -22,11 +22,11 @@ const questions =
             message:"Provide instructions and examples for use.",
             name:"usage"},
             {type:"input", 
-            message:"List you collaborators",
-            name:"Credits"},
+            message:"How may others contribute to the content?",
+            name:"contributing"},
             {type:"input", 
-            message:"If your project has features, please list them here",
-            name:"Features"},
+            message:"What are the test instructions?",
+            name:"test"},
             {type: "list",
             message: "Please select one of these licenses: ",
             name: "badge",
@@ -35,8 +35,13 @@ const questions =
                     "IBM",
                     "MIT",
                     "Perl"
-                ]
-            },
+                ]},
+            {type:"input", 
+            message:"Please provide your GitHub link.",
+            name:"GitHub"},
+            {type:"input", 
+            message:"Please provide your email.",
+            name:"email"},
         ]);
 
 
@@ -61,16 +66,7 @@ function init() {
 
 init();
     
-//     console.log("This is the readme generator");
-//     try{
-//         // const answers = await userPrompt();
-//         const md = generateMarkdown(answers);
-//         await writeFileAsync("README.md", md);
-//         console.log("your README has been generated!");
-//     } catch (err){
-//         console.log(err);
-//     }
-// }
+
 
 
 
